@@ -15,7 +15,7 @@
 
     <div id="posts" class="flex gap-6 items-center justify-center flex-col">
         <form action="http://localhost:3000/posts/create" method="post"
-            class="flex flex-col gap-2 border-2 px-4 py-2 rounded-lg bg-gray-100">
+            class="flex flex-col gap-2 border-2 px-4 py-2 rounded-lg bg-gray-100" enctype="multipart/form-data">
             <input type="text" name="author" id="author" placeholder="Your name"
                 class="px-4 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-300">
             <input type="text" name="title" id="title" placeholder="Title"
