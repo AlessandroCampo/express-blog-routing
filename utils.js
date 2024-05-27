@@ -54,10 +54,12 @@ const createSlug = (title) => {
 
 
 
+
+
 module.exports = {
     readFile,
     getPath,
     writeInFile,
     storage,
-    createSlug
+    createSlug,
 }

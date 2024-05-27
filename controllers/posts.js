@@ -1,5 +1,7 @@
 const utils = require('../utils.js');
-const dbFileName = 'postsDb'
+const dbFileName = 'postsDb';
+const path = require('path');
+let posts = require('../postsDb.json');
 
 const index = (req, res) => {
     res.format({
@@ -44,7 +46,17 @@ const create = (req, res) => {
 }
 
 const show = (req, res) => {
-
+    const slug = req.params.slug;
+    res.format({
+        "html": () => {
+            const htmlPath = path.join(__dirname, '..', 'views', 'show.html');
+            return res.type("html").sendFile(htmlPath);
+        },
+        "json": () => {
+            const selectedPost = posts.find(p => slug === p.slug);
+            return res.type("json").json(selectedPost);
+        }
+    })
 }
 
 module.exports = {
