@@ -35,7 +35,8 @@ const create = (req, res) => {
         image_url: `http://${req.headers.hostname}:${port}${req.file.filename}`,
         creation_date: new Date(),
         tags: arrayOfTags || [],
-        slug: utils.createSlug(data.title)
+        slug: utils.createSlug(data.title),
+        comments: []
     }
     const newData = [...existingPosts, newObject];
     const stringifiedData = JSON.stringify(newData);
@@ -76,9 +77,22 @@ const download = (req, res) => {
     return res.status(404).send('File not found');
 };
 
+const comment = (req, res) => {
+    const data = req.body;
+    const slug = req.params.slug;
+    const existingPosts = utils.readFile(dbFileName, 'json')
+    const selectedPost = existingPosts.find(p => slug === p.slug);
+    selectedPost.comments = [...selectedPost.comments, data.comment];
+    const newData = [...existingPosts];
+    const stringifiedData = JSON.stringify(newData);
+    utils.writeInFile(dbFileName, 'json', stringifiedData);
+    return res.redirect("/posts");
+}
+
 module.exports = {
     index,
     create,
     show,
-    download
+    download,
+    comment
 }
