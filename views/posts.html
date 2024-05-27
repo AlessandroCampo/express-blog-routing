@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Boolgram</title>
+</head>
+
+<body>
+
+    <div id="posts" class="flex gap-6 items-center justify-center flex-col">
+        <form action="http://localhost:3000/posts" method="post" class="flex flex-col gap-2 border-2"
+            enctype="multipart/form-data">
+            <input type="text" name="author" id="author" placeholder="Your name">
+            <input type="text" name="title" id="title" placeholder="title">
+            <textarea name="content" id="content" placeholder="What's on your mind?"></textarea>
+            <label for="image"> Make your post look nicer with a pic</label>
+            <input type="file" name="image" id="image" accept=".jpg, .png, .jpeg">
+            <button type="submit">POST</button>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+
+
+</body>
+
+</html>
