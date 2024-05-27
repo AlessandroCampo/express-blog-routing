@@ -31,7 +31,7 @@ const create = (req, res) => {
         title: data.title || 'No title for this post',
         author: data.author || 'Author of this post is unkown',
         content: data.content || '',
-        image: req.file ? `/uploads/${req.file.filename}` : 'https://picsum.photos/200/300?random=4',
+        image: req.file ? `/uploads/${req.file.filename}` : 'https://picsum.photos/400/1200?random=4',
         creation_date: new Date(),
         tags: arrayOfTags || [],
         slug: utils.createSlug(data.title)

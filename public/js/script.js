@@ -18,6 +18,7 @@ const printFeed = async () => {
     if (response) {
         console.log(response)
         const postsHTML = response.data.map(post => `
+        <a href="http://localhost:3000/posts/${post.slug}">
             <div class="max-w-sm rounded overflow-hidden shadow-lg">
                 <div class="px-6 py-4">
                     <p class="text-gray-600 text-sm"><span class="font-bold me-2">${post.author}</span> ${formatDate(post.creation_date)}</p>
@@ -31,6 +32,7 @@ const printFeed = async () => {
                     ${post.tags.map(tag => `<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">${tag}</span>`).join('')}
                 </div>
             </div>
+        </a>
         `).join('');
 
         postContainer.innerHTML += postsHTML;
