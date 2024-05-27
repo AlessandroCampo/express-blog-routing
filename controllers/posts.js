@@ -32,6 +32,7 @@ const create = (req, res) => {
         author: data.author || 'Author of this post is unkown',
         content: data.content || '',
         image: req.file ? `/uploads/${req.file.filename}` : 'https://picsum.photos/400/1200?random=4',
+        image_url: `http://${req.headers.host}/${req.file.filename}`,
         creation_date: new Date(),
         tags: arrayOfTags || [],
         slug: utils.createSlug(data.title)
@@ -54,13 +55,29 @@ const show = (req, res) => {
         },
         "json": () => {
             const selectedPost = posts.find(p => slug === p.slug);
+            if (!selectedPost) {
+                return res.status(404).json({
+                    success: false,
+                    error: `Could not find a file with following slug: ${slug}`
+                });
+            }
             return res.type("json").json(selectedPost);
         }
     })
-}
+};
+
+const download = (req, res) => {
+    const slug = req.params.slug;
+    const selectedPost = posts.find(p => slug === p.slug);
+    if (selectedPost) {
+        return res.download(`${__dirname}/../public${selectedPost.image}`);
+    }
+    return res.status(404).send('File not found');
+};
 
 module.exports = {
     index,
     create,
-    show
+    show,
+    download
 }

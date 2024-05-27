@@ -1,103 +1,67 @@
 [
     {
-        "title": "Exploring the Mountains",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
-        "image": "https://picsum.photos/400/1200?random=1",
+        "title": "Faker Wins 2023 League of Legends World Championship",
+        "content": "Faker, widely regarded as one of the greatest League of Legends players of all time, led his team, T1, to victory in the 2023 World Championship. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "/assets/faker.jpg",
         "tags": [
-            "travel",
-            "adventure",
-            "nature"
+            "League of Legends",
+            "T1",
+            "esports"
         ],
         "creation_date": "2024-05-24T10:00:00Z",
         "author": "John Doe",
-        "slug": "exploring-the-mountains"
+        "slug": "faker-wins-2023-league-of-legends-world-championship"
     },
     {
-        "title": "The Art of Cooking",
-        "content": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.",
-        "image": "https://picsum.photos/400/1200?random=2",
+        "title": "Valentino Rossi Culinary Adventures",
+        "content": "Join Valentino Rossi, the legendary MotoGP rider, on his culinary adventures around the world. Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
+        "image": "/assets/valentino-rossi.jpg",
         "tags": [
-            "food",
-            "cooking",
-            "recipes"
+            "Valentino Rossi",
+            "MotoGP",
+            "food"
         ],
         "creation_date": "2024-05-23T15:30:00Z",
         "author": "Jane Smith",
-        "slug": "the-art-of-cooking"
+        "slug": "valentino-rossi-culinary-adventures"
     },
     {
-        "title": "Tech Innovations of 2024",
-        "content": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque.",
-        "image": "https://picsum.photos/400/1200?random=3",
+        "title": "Roger Federer's Influence on Tennis Technology",
+        "content": "Explore the technological innovations driven by Roger Federer in the world of tennis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque.",
+        "image": "/assets/roger-federer.jpg",
         "tags": [
-            "technology",
-            "innovation",
-            "2024"
+            "Roger Federer",
+            "tennis",
+            "technology"
         ],
         "creation_date": "2024-05-22T08:45:00Z",
         "author": "Michael Johnson",
-        "slug": "tech-innovations-of-2024"
+        "slug": "roger-federer-influence-on-tennis-technology"
     },
     {
-        "title": "A Guide to Meditation",
-        "content": "Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.",
-        "image": "https://picsum.photos/400/1200?random=4",
+        "title": "Cristiano Ronaldo Guide to Mindful Meditation",
+        "content": "Join Cristiano Ronaldo on a journey of mindfulness and wellness through meditation. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.",
+        "image": "/assets/cristiano-ronaldo.jpg",
         "tags": [
-            "health",
+            "Cristiano Ronaldo",
             "wellness",
             "meditation"
         ],
         "creation_date": "2024-05-21T12:00:00Z",
         "author": "Emily Brown",
-        "slug": "a-guide-to-meditation"
+        "slug": "cristiano-ronaldo-guide-to-mindful-meditation"
     },
     {
-        "title": "Understanding Quantum Computing",
-        "content": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.",
-        "image": "https://picsum.photos/400/1200?random=5",
+        "title": "Inside the Mind of Carlos Sainz Quantum Racing Strategies",
+        "content": "Delve into the quantum computing strategies behind Carlos Sainz's Formula One success. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
+        "image": "/assets/carlos-sainz.jpg",
         "tags": [
-            "science",
-            "technology",
+            "Carlos Sainz",
+            "Formula One",
             "quantum computing"
         ],
         "creation_date": "2024-05-20T17:15:00Z",
         "author": "David Wilson",
-        "slug": "understanding-quantum-computing"
-    },
-    {
-        "title": "No title for this post",
-        "author": "Author of this post is unkown",
-        "content": "test no titolo",
-        "image": "https://picsum.photos/400/1200?random=4",
-        "creation_date": "2024-05-27T13:10:52.194Z",
-        "tags": [],
-        "slug": "no-title-post"
-    },
-    {
-        "title": "No title for this post",
-        "author": "Author of this post is unkown",
-        "content": "fdassrrf",
-        "image": "https://picsum.photos/400/1200?random=4",
-        "creation_date": "2024-05-27T13:10:53.267Z",
-        "tags": [],
-        "slug": "no-title-post-1"
-    },
-    {
-        "title": "No title for this post",
-        "author": "Author of this post is unkown",
-        "content": "asfdsafg",
-        "image": "https://picsum.photos/400/1200?random=4",
-        "creation_date": "2024-05-27T13:10:54.322Z",
-        "tags": [],
-        "slug": "no-title-post-2"
-    },
-    {
-        "title": "No title for this post",
-        "author": "Author of this post is unkown",
-        "content": "safasfgasg",
-        "image": "https://picsum.photos/400/1200?random=4",
-        "creation_date": "2024-05-27T13:11:00.522Z",
-        "tags": [],
-        "slug": "no-title-post-3"
+        "slug": "inside-the-mind-of-carlos-sainz-quantum-racing-strategies"
     }
 ]

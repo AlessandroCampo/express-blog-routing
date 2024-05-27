@@ -24,7 +24,7 @@ const writeInFile = function (fileName, extension, data) {
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const uploadPath = path.join(__dirname, 'public/uploads');
+        const uploadPath = path.join(__dirname, 'public/assets');
         if (!fs.existsSync(uploadPath)) {
             fs.mkdirSync(uploadPath, { recursive: true });
         }

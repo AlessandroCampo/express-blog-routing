@@ -26,6 +26,9 @@ const printCard = async () => {
                     <div class="px-6 py-4">
                         ${post.tags.map(tag => `<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">${tag}</span>`).join('')}
                     </div>
+                        <a href="http://localhost:3000/posts/${post.slug}/download" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Download this image
+                        </a>
                 </div>
             `;
             cardHTML.innerHTML = cardTemplate;
