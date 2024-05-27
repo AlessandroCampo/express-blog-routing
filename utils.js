@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
+let posts = require('./postsDb.json')
 
 
 
@@ -34,7 +35,21 @@ const storage = multer.diskStorage({
     }
 });
 
+const createSlug = (title) => {
+    currentPosts = JSON.parse(fs.readFileSync(__dirname + '/postsDb.json'))
+    const postSlugs = currentPosts.map(p => p.slug);
+    console.log(postSlugs)
+    let baseSlug = title ? title.replaceAll(' ', '-').toLowerCase() : 'no-title-post';
+    let uniqueSlug = baseSlug;
+    let counter = 1;
 
+    while (postSlugs.includes(uniqueSlug)) {
+        uniqueSlug = `${baseSlug}-${counter}`;
+        counter++;
+    }
+
+    return uniqueSlug;
+}
 
 
 
@@ -43,5 +58,6 @@ module.exports = {
     readFile,
     getPath,
     writeInFile,
-    storage
+    storage,
+    createSlug
 }

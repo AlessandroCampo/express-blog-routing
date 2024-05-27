@@ -31,7 +31,8 @@ const create = (req, res) => {
         content: data.content || '',
         image: req.file ? `/uploads/${req.file.filename}` : 'https://picsum.photos/200/300?random=4',
         creation_date: new Date(),
-        tags: arrayOfTags || []
+        tags: arrayOfTags || [],
+        slug: utils.createSlug(data.title)
     }
     const newData = [...existingPosts, newObject];
     const stringifiedData = JSON.stringify(newData);
@@ -42,7 +43,12 @@ const create = (req, res) => {
 
 }
 
+const show = (req, res) => {
+
+}
+
 module.exports = {
     index,
-    create
+    create,
+    show
 }
