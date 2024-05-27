@@ -21,8 +21,10 @@ const printCard = async () => {
                     <img class="h-64 w-full object-cover" src="${post.image}" alt="${post.title}">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">${post.title}</div>
-                        <p class="text-gray-700 text-base">${post.content}</p>
+                        <p class="text-gray-700 text-base mb-6">${post.content}</p>
+                        <a href="${post.image_url}" class="text-blue-600 font-bold mt-4 text-lg" target="_blank">Image Link <a/>
                     </div>
+                    
                     <div class="px-6 py-4">
                         ${post.tags.map(tag => `<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">${tag}</span>`).join('')}
                     </div>

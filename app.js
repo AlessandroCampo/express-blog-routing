@@ -17,3 +17,7 @@ app.use('/posts', postRouter)
 app.listen(port, () => {
     console.log(`http://localhost:${port}`);
 });
+
+module.exports = {
+    port
+};

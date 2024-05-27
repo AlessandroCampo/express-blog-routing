@@ -32,7 +32,7 @@ const create = (req, res) => {
         author: data.author || 'Author of this post is unkown',
         content: data.content || '',
         image: req.file ? `/uploads/${req.file.filename}` : 'https://picsum.photos/400/1200?random=4',
-        image_url: `http://${req.headers.host}/${req.file.filename}`,
+        image_url: `http://${req.headers.hostname}:${port}${req.file.filename}`,
         creation_date: new Date(),
         tags: arrayOfTags || [],
         slug: utils.createSlug(data.title)
@@ -61,7 +61,8 @@ const show = (req, res) => {
                     error: `Could not find a file with following slug: ${slug}`
                 });
             }
-            return res.type("json").json(selectedPost);
+            return res.type("json").json({ ...selectedPost, image_url: `http://localhost:3000${selectedPost.image}` });
+
         }
     })
 };
