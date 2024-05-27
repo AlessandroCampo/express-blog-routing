@@ -62,7 +62,7 @@ const show = (req, res) => {
                     error: `Could not find a file with following slug: ${slug}`
                 });
             }
-            return res.type("json").json({ ...selectedPost, image_url: `http://localhost:3000${selectedPost.image}` });
+            return res.type("json").json({ ...selectedPost, image_url: `${req.protocol}://${req.headers.host}${selectedPost.image}` });
 
         }
     })
